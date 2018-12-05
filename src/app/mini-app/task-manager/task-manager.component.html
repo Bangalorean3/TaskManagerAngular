@@ -7,7 +7,7 @@ Task:
   <br>
   <ol>
     <li *ngFor="let task of myTasks; let currentTask= index">
-      {{task}} 
+      {{task | lowercase}} 
       &nbsp; 
       <button (click)="taskDone(currentTask)">Done</button>
 
@@ -21,3 +21,17 @@ Task:
 
   </ol>
   </ol>
+
+  Currency Pipe:{{salary|currency:'INR'}}
+  <br>
+  Date Pipe:{{myDate|date:'MM/dd/yy'}}
+  <br>
+  String Sort Pipe:{{myString | stringSortPipe}}
+  <br>
+  unsorter friends :{{friends}}
+  <br>
+  sorted friends : {{friends|stringSortPipe :'dsc'}}
+  <br>
+  unsorted score :{{scores}}
+  <br>
+  sorted score :{{scores | numbersSortPipe : 'dsc'}}

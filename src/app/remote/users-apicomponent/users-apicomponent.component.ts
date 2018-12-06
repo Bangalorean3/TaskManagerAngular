@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiUsersServiceService } from 'src/app/services/rest-api-users-service.service';
-
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-users-apicomponent',
   templateUrl: './users-apicomponent.component.html',
@@ -9,7 +9,7 @@ import { RestApiUsersServiceService } from 'src/app/services/rest-api-users-serv
 export class UsersAPIComponentComponent implements OnInit {
 
     allUsers:any
-  constructor(private userService:RestApiUsersServiceService) { }
+  constructor(private userService:RestApiUsersServiceService, private router:Router) { }
 
   ngOnInit() {
 
@@ -62,5 +62,10 @@ export class UsersAPIComponentComponent implements OnInit {
         console.log(this.allUsers)
       })
     })
+  }
+
+  viewDetail(id){
+    console.log(id)
+    this.router.navigate(["/remoteData",id]) //navigation to /remoteData/(id)
   }
 }

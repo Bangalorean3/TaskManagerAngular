@@ -24,6 +24,7 @@ Search(real time):
     <td>{{user.email}}</td>
     <td>{{user.address.geo.lat+ ' and ' +user.address.geo.lng}}</td>
     <button (click)="deleteUser(user.id)">Delete user</button>
+    <td><button (click)="viewDetail(user.id)">Details</button></td>
   </tr>
   
 </table>

@@ -11,7 +11,7 @@ export class NumbersSortPipePipe implements PipeTransform {
 
 
   transform(value: any, args?: any): any {
-    if (agrs =='asc'){
+    if (args =='asc'){
       return   value.sort(this.sortNumber);
     } else if (args == 'dsc'){
       return value.sort().reverse();

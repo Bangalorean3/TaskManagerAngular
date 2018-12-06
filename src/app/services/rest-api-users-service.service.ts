@@ -23,4 +23,7 @@ export class RestApiUsersServiceService {
 
   }
 
+    getOneUser(id){
+      return this.http.get("http://localhost:3000/users/" +id)
+    }
 }
